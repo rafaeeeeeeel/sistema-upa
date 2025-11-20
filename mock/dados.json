@@ -1,0 +1,92 @@
+{
+  "upas": [
+    {
+      "id": 1,
+      "nome": "UPA Vinhais",
+      "bairro": "Vinhais",
+      "tempo_espera": 30,
+      "status": "normal",
+      "imagem": "assets/img/upas/upa-vinhais.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "UPA Itaqui-Bacanga",
+      "bairro": "Vila Embratel",
+      "tempo_espera": 55,
+      "status": "lotado",
+      "imagem": "assets/img/upas/up​​a-itaqui-bacanga.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "UPA Parque Vitória",
+      "bairro": "Parque Vitória",
+      "tempo_espera": 20,
+      "status": "normal",
+      "imagem": "assets/img/upas/upa-parque-vitoria.jpg"
+    }
+  ],
+
+  "leitos": [
+    {
+      "upa_id": 1,
+      "disponiveis": 15,
+      "ocupados": 10
+    },
+    {
+      "upa_id": 2,
+      "disponiveis": 4,
+      "ocupados": 26
+    },
+    {
+      "upa_id": 3,
+      "disponiveis": 18,
+      "ocupados": 7
+    }
+  ],
+
+  "especialidades": [
+    "Clínico Geral",
+    "Pediatria",
+    "Ortopedia",
+    "Cardiologia"
+  ],
+
+  "horarios": [
+    "07:00",
+    "08:00",
+    "09:00",
+    "10:00",
+    "14:00",
+    "15:00"
+  ],
+
+  "agendamentos": [
+    {
+      "id": 1,
+      "nome_paciente": "Marcos Silva",
+      "especialidade": "Clínico Geral",
+      "upa_id": 1,
+      "data": "2025-11-25",
+      "horario": "09:00",
+      "protocolo": "AGD-001"
+    },
+    {
+      "id": 2,
+      "nome_paciente": "Ana Beatriz",
+      "especialidade": "Pediatria",
+      "upa_id": 3,
+      "data": "2025-11-26",
+      "horario": "14:00",
+      "protocolo": "AGD-002"
+    },
+    {
+      "id": 3,
+      "nome_paciente": "Carlos Eduardo",
+      "especialidade": "Ortopedia",
+      "upa_id": 2,
+      "data": "2025-11-27",
+      "horario": "10:00",
+      "protocolo": "AGD-003"
+    }
+  ]
+}

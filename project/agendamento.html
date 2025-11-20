@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendar Consulta – UPAs São Luís</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/agendamento.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Agendar Consulta</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="upas.html">UPAs</a>
+            <a href="status-leitos.html">Status dos Leitos</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Preencha os dados</h2>
+
+        <form id="form-agendamento">
+            <label>Especialidade:</label>
+            <select id="especialidade"></select>
+
+            <label>UPA:</label>
+            <select id="upa"></select>
+
+            <label>Data:</label>
+            <input type="date" id="data" />
+
+            <label>Horário:</label>
+            <select id="horario"></select>
+
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+
+        <p id="protocolo"></p>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/agendamento.js"></script>
+</body>
+</html>
