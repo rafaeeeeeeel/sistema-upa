@@ -1,0 +1,112 @@
+/* -------- RESET -------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0b7285, #15aabf);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------- CONTAINER -------- */
+.container {
+    width: 95%;
+    max-width: 430px;
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: fadeIn .5s ease-in-out;
+}
+
+/* Fade efeito suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------- HEADER -------- */
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.header-center h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #0b7285;
+}
+
+/* -------- FORM -------- */
+.form-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #0b7285;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    outline: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #0b7285;
+    box-shadow: 0 0 5px #0b7285;
+}
+
+/* -------- BOTÃO -------- */
+.btn-primary {
+    width: 100%;
+    background: #0b7285;
+    color: white;
+    padding: 13px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #0a6173;
+    transform: scale(1.02);
+}
+
+/* -------- LINK -------- */
+.swap {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.swap a {
+    color: #0b7285;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.swap a:hover {
+    text-decoration: underline;
+}

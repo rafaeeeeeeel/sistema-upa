@@ -74,6 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- 2. FUNCIONALIDADE DO BOTÃO VOLTAR ---
     btnVoltar.addEventListener("click", function() {
         // Redireciona para 'login.html', que está na mesma pasta /html/
-        window.location.href = "../html/index.html"; 
+        window.location.href = "index.html"; 
     });
 });

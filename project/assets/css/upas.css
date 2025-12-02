@@ -1,0 +1,237 @@
+/* ======== ESTILO GERAL ======== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0b7285, #15aabf);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ======== CABEÇALHO ======== */
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: #0b7285; /* Azul igual ao login/cadastro */
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.page-header h1 {
+    margin: 10px 0 0 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: white; /* Mantendo branco como pediu */
+}
+
+.logo-topo {
+    width: 65px;
+    height: 65px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ======== SEÇÃO DE LEGENDA DE STATUS ======== */
+.status-upas-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.status-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-indicator {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.status-indicator.normal {
+    background-color: #4CAF50; /* Verde */
+}
+
+.status-indicator.lotado {
+    background-color: #FF9800; /* Laranja */
+}
+
+.status-indicator.superlotado {
+    background-color: #F44336; /* Vermelho */
+}
+
+.status-card p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* ======== SEÇÃO DOS DADOS DAS UPAS ======== */
+.dados-upas-section {
+    background: white;
+    margin: 30px auto;
+    padding: 30px 20px;
+    max-width: 900px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.dados-container h2 {
+    color: #0b7285;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* ======== LISTA DE UPAS ======== */
+.upas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ======== CARTÃO DAS UPAS (gerado pelo JS) ======== */
+.cartao-upa {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #0b7285;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.cartao-upa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    background: #f0f7f9;
+}
+
+.cartao-upa h3 {
+    margin: 0 0 15px 0;
+    color: #0b7285;
+    font-size: 1.4rem;
+}
+
+.cartao-upa p {
+    margin: 8px 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.cartao-upa b {
+    color: #0b7285;
+}
+
+.cartao-upa hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+/* Classes de status para os cartões */
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.status-normal {
+    background-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.status-lotado {
+    background-color: #FF9800;
+    color: #FF9800;
+}
+
+.status-superlotado {
+    background-color: #F44336;
+    color: #F44336;
+}
+
+/* Estilo para o texto de status */
+.cartao-upa .status-normal,
+.cartao-upa .status-lotado, 
+.cartao-upa .status-superlotado {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* ======== BOTÃO VOLTAR ======== */
+.btn-voltar {
+    margin: 40px auto;
+    display: block;
+    padding: 12px 24px;
+    background-color: #0b7285; /* mesmo azul */
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-voltar:hover {
+    background-color: #095f6c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 600px) {
+    .page-header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .status-upas-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+        margin: 20px;
+    }
+
+    .dados-upas-section {
+        margin: 20px;
+        padding: 20px 15px;
+    }
+
+    .dados-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .cartao-upa {
+        padding: 15px;
+    }
+
+    .cartao-upa h3 {
+        font-size: 1.2rem;
+    }
+}

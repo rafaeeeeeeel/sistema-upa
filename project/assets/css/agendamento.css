@@ -1,0 +1,137 @@
+/* ---------- ESTILO GERAL (segue o padrão das outras telas) ---------- */
+
+body {
+    background: linear-gradient(135deg, #0b7285, #15aabf);
+    min-height: 100vh;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* ---------- IMAGEM ---------- */
+.imagem-agendamento {
+    display: block;
+    width: 350px;
+    margin: 0 auto 25px auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+/* ---------- CONTAINER DO FORM ----------- */
+.form-container {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    max-width: 480px;
+    margin: 0 auto;
+    color: #0b7285;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    animation: fadeIn .5s ease-in-out;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+/* Inputs e selects */
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #0b7285;
+    box-shadow: 0 0 6px #0b7285;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+/* Confirmar */
+#btnAgendar {
+    background-color: #0b7285;
+    color: white;
+}
+
+#btnAgendar:hover {
+    background-color: #095f6c;
+    transform: scale(1.02);
+}
+
+/* Voltar */
+#btnVoltar {
+    background-color: #adb5bd;
+    color: #333;
+}
+
+#btnVoltar:hover {
+    background-color: #8e9a9f;
+    transform: scale(1.02);
+}
+
+/* Protocolo */
+#protocolo {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: green;
+}
+
+/* ---------- LISTA DE AGENDAMENTOS ---------- */
+#listaAgendamentos {
+    background: #ffffff;
+    color: #0b7285;
+    max-width: 480px;
+    margin: 40px auto 0 auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+#listaAgendamentos h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.agendamento-item {
+    background: #e8f9ff;
+    padding: 12px;
+    border-left: 6px solid #0b7285;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}

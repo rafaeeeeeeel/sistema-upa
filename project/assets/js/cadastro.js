@@ -23,6 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // CORRIGIDO: Redirecionamento correto:
         // Sair de /js (..) e entrar em /html (/html/login.html)
-        window.location.href = "../html/login.html";
+        window.location.href = "login.html";
     });
 });

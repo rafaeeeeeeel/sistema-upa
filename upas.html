@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Status das UPAs - smartUPA</title>
+    <link rel="stylesheet" href="project/assets/css/upas.css"> 
+    <script defer src="project/assets/js/status-upas.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <img src="project/assets/img/status-upa.jpg" alt="Logo smartUPA" class="logo-topo">
+        <h1>Status das UPAs</h1>
+    </header>
+
+    <!-- SEÇÃO BRANCA DE STATUS -->
+    <section class="status-upas-container">
+        <div class="status-card">
+            <div class="status-indicator normal"></div>
+            <p>Normal</p>
+        </div>
+
+        <div class="status-card">
+            <div class="status-indicator lotado"></div>
+            <p>Lotado</p>
+        </div>
+
+        <div class="status-card">
+            <div class="status-indicator superlotado"></div>
+            <p>Superlotado</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO BRANCA PARA OS DADOS DAS UPAS (GERADOS PELO JS) -->
+    <section class="dados-upas-section">
+        <div class="dados-container">
+            <h2>Status em Tempo Real das UPAs</h2>
+            <div id="upas-status" class="upas-list">
+                <!-- Os cartões das UPAs serão inseridos aqui pelo JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <button id="btnVoltar" class="btn-voltar">Voltar</button>
+</body>
+</html>

@@ -1,77 +1,91 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Dados simulados dos leitos (Mock Data)
-    const mockLeitos = [
-        { tipo: "Observação", total: 20, ocupados: 12 },
-        { tipo: "Emergência", total: 10, ocupados: 9 },
-        { tipo: "Isolamento", total: 5, ocupados: 3 },
-        { tipo: "Pediátrico", total: 8, ocupados: 4 }
-    ];
+// status-leitos.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Dados de exemplo (substituir por dados reais da API)
+    const dadosUPA = {
+        totalLeitos: 150,
+        leitosOcupados: 120,
+        leitosLivres: 30,
+        taxaOcupacao: 80,
+        tiposLeitos: [
+            {
+                tipo: "UTI Adulto",
+                total: 40,
+                ocupados: 38,
+                livres: 2,
+                ocupacao: 95
+            },
+            {
+                tipo: "UTI Pediátrica",
+                total: 25,
+                ocupados: 20,
+                livres: 5,
+                ocupacao: 80
+            },
+            {
+                tipo: "Enfermaria Adulto",
+                total: 60,
+                ocupados: 48,
+                livres: 12,
+                ocupacao: 80
+            },
+            {
+                tipo: "Enfermaria Pediátrica",
+                total: 25,
+                ocupados: 14,
+                livres: 11,
+                ocupacao: 56
+            }
+        ]
+    };
 
-    const leitosArea = document.getElementById("leitos");
-    const resumoArea = document.getElementById("resumoGeral");
-    const btnVoltar = document.getElementById("btnVoltar");
-
-    // --- 1. CALCULAR E EXIBIR RESUMO GERAL ---
-    let totalGeral = 0;
-    let ocupadosGeral = 0;
-
-    mockLeitos.forEach(l => {
-        totalGeral += l.total;
-        ocupadosGeral += l.ocupados;
-    });
-
-    const livresGeral = totalGeral - ocupadosGeral;
-    const taxaOcupacao = ((ocupadosGeral / totalGeral) * 100).toFixed(1);
-
-    resumoArea.innerHTML = `
-        <p>Total de Leitos na UPA: <b>${totalGeral}</b></p>
-        <p>Leitos Ocupados: <span style="color: #e53e3e;"><b>${ocupadosGeral}</b></span></p>
-        <p>Leitos Livres: <span style="color: #38a169;"><b>${livresGeral}</b></span></p>
-        <p>Taxa de Ocupação: <b>${taxaOcupacao}%</b></p>
+    // Preencher resumo geral
+    const resumoHTML = `
+        <div class="resumo-item">
+            <h3>Total de Leitos</h3>
+            <div class="resumo-numero">${dadosUPA.totalLeitos}</div>
+        </div>
+        <div class="resumo-item">
+            <h3>Leitos Ocupados</h3>
+            <div class="resumo-numero">${dadosUPA.leitosOcupados}</div>
+        </div>
+        <div class="resumo-item">
+            <h3>Leitos Livres</h3>
+            <div class="resumo-numero">${dadosUPA.leitosLivres}</div>
+        </div>
+        <div class="resumo-item">
+            <h3>Taxa de Ocupação</h3>
+            <div class="resumo-numero">${dadosUPA.taxaOcupacao}%</div>
+        </div>
     `;
+    
+    document.getElementById('resumoGeral').innerHTML = resumoHTML;
 
-    // --- 2. EXIBIR DETALHE POR TIPO DE LEITO ---
-    mockLeitos.forEach(l => {
-        const livre = l.total - l.ocupados;
-        const ocupacaoPercentual = (l.ocupados / l.total) * 100;
-
-        // Determina a cor com base na taxa de ocupação
-        let corBarra = '#38a169'; // Verde: Livre
-        if (ocupacaoPercentual >= 80) {
-            corBarra = '#e53e3e'; // Vermelho: Quase cheio
-        } else if (ocupacaoPercentual >= 50) {
-            corBarra = '#dd6b20'; // Laranja: Metade
-        }
-        
-        const div = document.createElement("div");
-        div.className = "cartao-leito"; // Para estilização no CSS
-
-        div.innerHTML = `
-            <h3>${l.tipo}</h3>
-            
-            <div class="indicador-total">
-                <span class="livres">Livres: ${livre}</span> | 
-                <span class="ocupados">Ocupados: ${l.ocupados}</span>
+    // Preencher detalhes dos leitos
+    const leitosHTML = dadosUPA.tiposLeitos.map(leito => `
+        <div class="leito-card">
+            <div class="leito-titulo">
+                <span>${leito.tipo}</span>
             </div>
-
-            <div class="barra-progresso">
-                <div class="barra-preenchida" 
-                     style="width: ${ocupacaoPercentual}%; background-color: ${corBarra};">
+            <div class="leito-info">Total: <span>${leito.total}</span> leitos</div>
+            <div class="leito-info">Ocupados: <span>${leito.ocupados}</span></div>
+            <div class="leito-info">Livres: <span>${leito.livres}</span></div>
+            
+            <div class="barra-container">
+                <div class="barra-label">
+                    <span>Ocupação</span>
+                    <span>${leito.ocupacao}%</span>
+                </div>
+                <div class="barra">
+                    <div class="barra-preenchida" style="width: ${leito.ocupacao}%"></div>
                 </div>
             </div>
+        </div>
+    `).join('');
 
-            <p>Total de Leitos: ${l.total}</p>
-        `;
+    document.getElementById('leitos').innerHTML = leitosHTML;
 
-        leitosArea.appendChild(div);
+    // Botão voltar
+    document.getElementById('btnVoltar').addEventListener('click', function() {
+        window.location.href = 'index.html';
     });
-    
-    // --- 3. FUNCIONALIDADE DO BOTÃO VOLTAR ---
-    btnVoltar.addEventListener("click", function() {
-        // Sair de /js (..) e entrar em /html/login.html
-        window.location.href = "../html/index.html"; 
-    });
-
-    // NOTA: Para que as cores e barras funcionem, você precisará adicionar CSS
-    // no seu arquivo 'css/style.css'.
 });

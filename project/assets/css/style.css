@@ -1,0 +1,327 @@
+/* ======== ESTILO GERAL ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======== CABEÇALHO ======== */
+.header {
+    background-color: #0b7285;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+/* ======== MENU ======== */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-sair {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-sair:hover {
+    background-color: #c82333;
+}
+
+/* ======== CONTEÚDO PRINCIPAL ======== */
+.main-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* ======== SEÇÃO DE BOAS-VINDAS ======== */
+.welcome-section {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.welcome-img-container {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-img {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.welcome-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.welcome-title {
+    color: #0b7285;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.welcome-descricao {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ======== CARDS DE FUNCIONALIDADES ======== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #0b7285;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.feature-btn {
+    display: inline-block;
+    background-color: #0b7285;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.feature-btn:hover {
+    background-color: #095f6c;
+}
+
+/* ======== SEÇÃO SOBRE ======== */
+.sobre {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+.sobre h2 {
+    color: #0b7285;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.sobre p {
+    color: #555;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ======== BENEFÍCIOS ======== */
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background-color: #f0f7f9;
+    border-radius: 6px;
+}
+
+.benefit-icon {
+    background-color: #0b7285;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.sobre-footer {
+    color: #0b7285;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ======== RODAPÉ ======== */
+.footer {
+    background-color: #0b7285;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .welcome-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .welcome-img {
+        max-width: 160px;
+    }
+    
+    .welcome-title {
+        font-size: 1.6rem;
+    }
+    
+    .welcome-descricao {
+        font-size: 1rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .menu-link, .btn-sair {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .welcome-section {
+        padding: 25px 15px;
+        gap: 25px;
+    }
+    
+    .welcome-img {
+        max-width: 140px;
+    }
+    
+    .welcome-title {
+        font-size: 1.4rem;
+    }
+    
+    .welcome-descricao {
+        font-size: 0.95rem;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .sobre {
+        padding: 20px 15px;
+    }
+}

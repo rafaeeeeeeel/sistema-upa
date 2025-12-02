@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>Cadastro - smartUPA</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="project/assets/css/cadastro.css">
+    <script defer src="project/assets/js/cadastro.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header-center">
+            <img src="project/assets/img/smartUPA.png" alt="smartUPA" class="logo">
+            <h1>Crie sua conta</h1>
+        </header>
+
+        <section class="form-container">
+
+            <form id="formCadastro">
+
+                <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" type="text" placeholder="Ex: Maria Souza" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="email@exemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password" placeholder="Crie uma senha segura" required>
+                </div>
+
+                <button type="button" id="btnCadastrar" class="btn-primary">
+                    ✨ Criar Conta
+                </button>
+            </form>
+
+            <p class="swap">
+                Já tem conta?
+                <a href="login.html">Entrar</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
