@@ -13,14 +13,13 @@
   "routes": [
     {
       "src": "/project/assets/(.*)",
-      "dest": "/project/assets/$1",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
       }
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "^/(login|cadastro|agendamento|status-leitos|upas)(\\?.+)?$",
+      "dest": "/$1.html"
     }
   ]
 }
